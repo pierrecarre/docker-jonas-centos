@@ -1,4 +1,4 @@
-FROM pierrecarre:java-centos:oracle-6-jdk
+FROM pierrecarre/java-centos:oracle-6-jdk
 MAINTAINER Pierre CARRE <pierre.carre78@gmail.com>
 
 RUN yum -y install tar && yum -y clean all
