@@ -23,14 +23,15 @@ RUN cd /opt \
 && tar xzf jonas4.10.9-tomcat5.5.28.tgz \
 && rm -rf jonas4.10.9-tomcat5.5.28.tgz
 
-RUN mkdir /opt/jonas_base
-
 # Set environment variables.
 ENV HOME /root
 ENV ANT_HOME /opt/apache-ant-1.6.5
 ENV JONAS_ROOT /opt/JONAS_4_10_9
 ENV JONAS_BASE /opt/jonas_base
 ENV PATH $JONAS_ROOT/bin/unix:$ANT_HOME/bin:$PATH
+
+# Create JOnAS base.
+RUN cd $JONAS_ROOT && ant create_jonasbase
 
 # Define working directory.
 WORKDIR /root
