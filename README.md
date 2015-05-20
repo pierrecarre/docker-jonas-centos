@@ -8,10 +8,9 @@ The different versions are defined using TAGs.
 
 The available versions are
 
-* latest - JOnAS 5
-* jonas5 - JOnAS 5
+* latest - JOnAS 4
 * jonas4 - JOnAS 4
 
-Example to run a container with JOnAS 5
+Example to run a container with JOnAS 4
 
-    docker run -ti pierrecarre/jonas-centos:jonas5
+    docker run -ti pierrecarre/jonas-centos:jonas4
